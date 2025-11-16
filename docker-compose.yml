@@ -1,0 +1,18 @@
+version: "3.9"
+services:
+  frontend:
+    build: ./frontend
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/app:cached   # ou juste ./frontend:/app mais ignore node_modules
+      - /app/node_modules         # empêche l’écrasement de node_modules
+    depends_on:
+      - backend
+
+  backend:
+    build: ./backend
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./backend:/app

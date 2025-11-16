@@ -1,0 +1,25 @@
+body {
+  margin: 0; /* important pour que height: 100vh fonctionne */
+  background: #f4f6f9;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
